@@ -47,10 +47,10 @@ const routes = [
     name: 'error',
     component: ErrorView
   },
-  // {
-  //   path: '*',
-  //   redirect: { name: "error" }
-  // }
+  {
+    path: '*',
+    redirect: { name: "error" }
+  }
 ]
 
 const router = new VueRouter({
@@ -61,12 +61,12 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   if (to.name == 'step2') {
-    if(!store.getters['form/formStep1Valid']) {
+    if(!store.getters['form/stepValid']('1')) {
       next({ name: 'step1' })
     } else next()
   } else next()
   if (to.name == 'step3') {
-    if(!store.getters['form/formStep2Valid']) {
+    if(!store.getters['form/stepValid'](2)) {
       next({ name: 'step2' })
     } else next()
   } else next()

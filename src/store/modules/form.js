@@ -8,14 +8,8 @@ const getters = {
   currentStep(state) {
     return state.formProgress
   },
-  formStep1Valid(state) {
-    return state.formProgress >= 1
-  },
-  formStep2Valid(state) {
-    return state.formProgress >= 2
-  },
-  formStep3Valid(state) {
-    return state.formProgress >= 3
+  stepValid: state => step => {
+    return state.formProgress >= step
   }
 }
 
