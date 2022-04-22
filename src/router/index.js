@@ -43,14 +43,14 @@ const routes = [
     component: () => import('../views/AboutView.vue')
   },
   {
-    path: 'error',
+    path: '/error',
     name: 'error',
     component: ErrorView
   },
-  {
-    path: '*',
-    redirect: { name: "error" }
-  }
+  // {
+  //   path: '*',
+  //   redirect: { name: "error" }
+  // }
 ]
 
 const router = new VueRouter({
