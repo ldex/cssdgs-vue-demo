@@ -6,6 +6,7 @@
       <label for="valid">Valide ?</label>
     </p>
     <button @click="addStep">Ajout dynamique de step 4</button>
+
     <button @click="nextStep">Suivant</button>
   </div>
 </template>

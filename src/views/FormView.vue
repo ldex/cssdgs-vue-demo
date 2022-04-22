@@ -6,7 +6,9 @@
             <router-link to="/form/step2">Step 2</router-link> |
             <router-link to="/form/step3">Step 3</router-link>
         </nav>
-        <router-view/>
+        <keep-alive>
+            <router-view/>
+        </keep-alive>
     </div>
 </template>
 
